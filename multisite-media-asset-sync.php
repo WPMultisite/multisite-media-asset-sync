@@ -10,11 +10,15 @@
  * Text Domain: multisite-media-asset-sync
  * Domain Path: /languages
  * Requires PHP: 7.4
+ * Update URI: https://updates.wenpai.net
  */
 
 if (!defined("ABSPATH")) {
     exit();
 }
+
+require_once plugin_dir_path( __FILE__ ) . 'includes/class-wenpai-updater.php';
+new WenPai_Updater( plugin_basename( __FILE__ ), '1.0.7' );
 
 class Multisite_Media_Sync
 {
